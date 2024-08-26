@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neko Clothes</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Neko Clothes</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#products">Productos</a></li>
+                <li><a href="#cart">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h2>¡Bienvenidos a nuestra tienda!</h2>
+        <p>Las mejores pantalones del condau.</p>
+        <a href="#products" class="btn">Ver Productos</a>
+    </section>
+
+    <section id="products" class="products">
+        <h2>Nuestros Productos</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="baggy.jpg" alt="baggy">
+                <h3>Pantalón Baggy negro</h3>
+                <p>Q350.99</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Pantalón Baggy negro', 350.99)">Añadir al Carrito</button>
+            </div>
+            <div class="product-item">
+                <img src="fit.jpg" alt="fit">
+                <h3>Pantalón Fit azul claro</h3>
+                <p>Q400.00</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Pantalón Fit azul claro', 400.00)">Añadir al Carrito</button>
+            </div>
+            <div class="product-item">
+                <img src="cargo.jpg" alt="chopper">
+                <h3>Pantalón Cargo café</h3>
+                <p>Q380.00</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Pantalón cargo café', 380.00)">Añadir al Carrito</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="cart" class="cart">
+        <h2>Carrito de Compras</h2>
+        <div id="cart-items"></div>
+        <p id="total">Total: Q0.00</p>
+        <button class="pay-btn" onclick="checkout()">Pagar</button>
+    </section>
+
+    <div class="comment-section">
+        <h2>Comentarios</h2>
+        <form class="comment-form" id="commentForm">
+            <input type="text" id="name" placeholder="Tu nombre" required>
+            <textarea id="comment" placeholder="Tu comentario" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+
+        <ul class="comment-list" id="commentList">
+        <!-- Aquí se mostrarán los comentarios -->
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+
+    <footer>
+        <p>&copy; 2024 Tienda de Ropa. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
